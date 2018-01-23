@@ -1,6 +1,6 @@
-#How to run
+# How to run
 
-##Adjust variables in startserver.sh
+## Adjust variables in startserver.sh
 ```
 PORTS="8080:80"
 LOCAL_FOLDER="$PWD/public-html/"
