@@ -1,15 +1,20 @@
 #How to run
 
-##Create a Dockerfile in your project
-
+##Adjust variables in startserver.sh
 ```
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
+PORTS="8080:80"
+LOCAL_FOLDER="$PWD/public-html/"
+REMOTE_FOLDER="/usr/local/apache2/htdocs/"
+NAME=local_apache
+IMAGE=httpd
 ```
 
-##Build and run the Docker image
-
+## Launch server container
 ```
-$ docker build -t my-apache2 .
-$ docker run -dit --name my-running-app my-apache2
+./startserver.sh START
+```
+
+## Stop server container
+```
+./stopserver.sh STOP
 ```
